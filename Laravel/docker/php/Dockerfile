@@ -1,5 +1,6 @@
 FROM php:7.4-fpm
 RUN apt-get update \
+  && apt-get -y install git \
   && apt-get -y install libzip-dev \
   && apt-get -y install libonig-dev \
   && apt-get -y install vim \
