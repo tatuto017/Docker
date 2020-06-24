@@ -6,6 +6,7 @@ RUN apt-get update \
   && apt-get -y install vim \
   && apt-get -y install zip \
   && apt-get -y install unzip \
+  && apt-get -y install npm \
   && docker-php-ext-install pdo_mysql mysqli mbstring
 
 #Composer install
