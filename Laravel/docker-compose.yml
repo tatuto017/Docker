@@ -7,6 +7,7 @@ services:
     volumes:
       - ./webapp:/var/www/webapp
       - ./docker/php/bash_history:/root/.bash_history
+      - ./docker/php/vimrc:/root/.vimrc
       - ./docker/php/php.ini:/usr/local/etc/php/php.ini
     networks:
       - webapp-net
