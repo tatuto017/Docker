@@ -10,7 +10,9 @@ rm -rf /var/www/webapp/*
 composer create-project --prefer-dist laravel/laravel webapp "6.*"
 cd webapp
 composer require barryvdh/laravel-debugbar
+composer require beyondcode/laravel-query-detector --dev
 php artisan vendor:publish --provider="Barryvdh\Debugbar\ServiceProvider"
+php artisan vendor:publish --provider="BeyondCode\QueryDetector\QueryDetectorServiceProvider"
 echo "DEBUGBAR_ENABLED=null" >> .env
 cat .env |
 sed -e "s/DB_CONNECTION=mysql/DB_CONNECTION=$db/"    \
